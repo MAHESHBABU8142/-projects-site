@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Portfolio</title>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Great+Vibes&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Great+Vibes&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Great+Vibes&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+          padding: 0;
+          margin: 0;
+        }
+        body {
+          background-color: black;
+          color :white ;
+        }
+
+  /*--------head-styling---------*/
+
+        header{
+          margin: 2.4rem 2rem;
+          display: flex;
+          gap:30%;
+           align-items: center;
+           font-size:1.4rem;
+        }
+        header ul {
+          display: flex;
+          list-style: none;
+          gap:4rem;
+          font-size: 1.4rem;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+    /*--------main-styling---------*/
+
+        main {
+          padding-top:7%;
+          margin-bottom: 5rem;
+          text-align: center;
+        }
+        #intro {
+          font-size: 2rem;
+          font-family: "Roboto Mono", monospace;
+          color: aqua;
+        }
+        #name {
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-size: 3rem;
+          color: #f1db0e;
+        }
+        #tag {
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-size:4rem;
+        }
+        #work {
+          font-family: monospace;
+          text-indent:2%;
+          font-size: 1.2rem;
+          margin:3% 0;
+          font-weight: normal;
+        }
+        #introPara {
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          line-height:1.45;
+          padding-left: 0;
+          margin-left: 0;
+        
+        }
+        a {
+          text-decoration:none;
+          color:white;
+        }
+         
+
+    /*--------section-styling---------*/
+    section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+       text-align: center;
+    }
+    section div {
+      margin: 5rem 0;
+    }
+    section .sectionName {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: 1rem;
+     
+    }
+    section .aboutPara {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      
+    }
+    figure {
+      order: 10px solid white;
+      margin: 3rem 0;
+    }
+    figure img {
+      border-radius:1rem;
+      border: 2px solid white;
+      width: 40%;
+      
+    }
+    figure figcaption {
+      margin: 1rem 0;
+      font-size:1.5rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    section .upcoming-projects {
+      font-size:1.3rem;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 100%;
+    }
+    
+
+
+
+          /*-----Desktop-styling-------*/
+
+        @media(min-width:1024px) {
+          header {
+            gap:57% ;
+          }
+          main {
+            padding-top:7%;
+          padding-left: 20%;
+          text-align: inherit;
+          }
+          #intro {
+            font-size: 3.3rem;
+          }
+          #name {
+            font-size: 4.3rem;
+          }
+          #work {
+            margin: 15px;
+          }
+          #tag {
+            font-size: 5.3rem;
+          }
+          #introPara {
+            margin-right: 20%;
+            font-size: 1.5rem;
+          }
+          figure img {
+            width: 20%;
+          }
+        }
+
+      </style>
+    </head>
+    <body>
+       <header>
+          <h1>Portfolio</h1>
+            <ul>
+              <li>Home</li>
+             <a href="#about"><li>About</li> </a>
+             <a href="#projectList"><li>Projects</li></a>
+              <li>Contact</li>
+            </ul>
+       </header>
+
+       <main>
+        <p id="intro">Hi,my name is</p>
+        <p id="name">Mudavath Maheshbabu.</p>
+        <p id="tag">I build things for the web.</p>
+        <p id="work">Web Developer | Problem Solver | Future Tech Builder</p>
+        <p id="introPara">
+          A passionate web developer focused on building clean, responsive, and user-friendly websites. I love turning ideas into real-world digital experiences using modern technologies. Whether it's front-end design or back-end logic, I aim to craft web solutions that are fast, scalable, and impactful.
+Explore my work and join me on this journey of code, creativity, and constant learning.
+        </p>
+       </main>
+
+       <section>
+           <div id="about">
+              <h2 class="sectionName">About</h2>
+              <p class="aboutPara">I'm Mudavath Maheshbabu, a web developer passionate about crafting seamless digital experiences.
+                 With a deep interest in frontend and backend technologies, I specialize in building responsive, scalable, 
+                 and high-performance web applications.
+              </p>
+              <p class="aboutPara">
+                I believe in clean code, intuitive design, and problem-solving through technology. My journey in web development is driven by curiosity and a commitment to continuous learning, always staying up-to-date with the latest industry trends.
+              </p>
+              <p class="aboutPara">
+                Currently, I'm mastering HTML, CSS, JavaScript, backend development, and Android development using Kotlin, while exploring AI and Large Language Models (LLMs) to push the boundaries of technology.
+              </p>
+              <p class="aboutPara">
+                Let's build something amazing together!
+              </p>
+              </div>
+
+           </div id="projects">
+            <h2 class="sectionName" >Projects</h2>
+             <div id="projectList">
+
+          <!---------project 1--------->
+              <figure>
+              <img id="project1" src="math game project onclick pic.avif">
+              <figcaption>Math game</figcaption>
+            </figure>
+
+
+          <!---------project 2--------->
+              <figure>
+              <img id="project2" src="to do list project onclick pic.jpg">
+              <figcaption>To do list</figcaption>
+            </figure>
+
+          <!---------project 3--------->
+             <figure>
+              <img id="project3" src="Random Quote generator project onclick pic.jpg">
+              <figcaption>Random quote generator</figcaption>
+             </figure>
+
+
+             
+          <!---------project 4--------->
+          <figure>
+            <img id="project4" src="notes project onclick pic.webp">
+            <figcaption>Notes</figcaption>
+           </figure>
+
+         
+
+
+         <!---------upcoming-info-------->
+
+          <p class="upcoming-projects">Upcoming projects<br>
+             calculator <br>
+             chatbot <br>
+             weather app <br>
+              
+          <p class="upcoming-projects">More exciting projects are on the way.<br>Stay tuned and keep watching this space!</p>
+          </p>
+            <div id="contact">
+              <h2 class="sectionName" >Contact</h2>
+            </div>
+       </section>
+
+
+
+
+    <!------------script----------------->
+      <script>
+        document.getElementById("project1").addEventListener("click",function showProject(){
+           window.location.href="math quiz game.html" ;
+        }) ;
+        document.getElementById("project2").addEventListener("click",function showProject(){
+           window.location.href="to do.html" ;
+        }) ;
+        document.getElementById("project3").addEventListener("click",function showProject(){
+           window.location.href="Random quote generator.html" ;
+        }) ;
+        document.getElementById("project4").addEventListener("click",function showProject(){
+           window.location.href="notepad.html" ;
+        }) ;
+       
+      </script>
+    </body>
+</html>

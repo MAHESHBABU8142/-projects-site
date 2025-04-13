@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To do</title>
+        <style>
+          *{
+            padding: 0;
+            margin: 0;
+          }
+          html {
+            background:rgb(115, 152, 155);
+          }
+          body {
+            border-radius:8px;
+            padding:10px 15px;
+            padding-bottom:300px;
+            background-color: black;
+            width:47vw;
+            margin:10%;
+            color :white ;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+          }
+          input  {
+            background-color: rgb(51, 48, 48);
+            border: none;
+            font-size:1.2rem;
+            padding:10px;
+            width:100%;
+            border-radius:8px;
+            margin:10px 0;
+          }
+        
+        #status {
+          
+            font-size: 1.1rem;
+            font-family:monospace;
+            margin:5px;
+            
+        }
+        #addbutton {
+            background-color: rgb(78, 76, 76);
+            padding:5px;
+            width:35px;
+            height:35px;
+            border: none;
+            font-size:1.5rem;
+            border-radius:50%;
+            color:rgb(235, 235, 37);
+            position: absolute;
+            bottom:40px;
+            right:40px;
+        }
+        #userinput {
+          color: white;
+          width:98%;
+          
+        }
+        h2 {
+          color: white;
+          background-color: rgb(51, 48, 48);
+          font-family:monospace ;
+          padding-left: 15px;
+          border-radius:8px;
+          margin:10px 0;
+          padding:7px;
+          font-weight: normal;
+          font-size: 1.5rem;
+          margin-top: 10px;
+        
+        }
+
+        </style>
+    </head>
+    <body>
+        <header>
+        <h1>To-do</h1>
+        <input type="search" placeholder="Search">
+        <input id="userinput" type="text" placeholder="add task">
+        <p id="status">Not Completed</p>
+        </header>
+        <div> 
+            <button id="addbutton">+</button>
+        </div>
+        <div id="todo">
+           
+        </div>
+        <script>
+            let addbtn=document.getElementById("addbutton") ;
+            addbtn.addEventListener("click",function(){
+              let task=document.getElementById("userinput").value ;
+               if (task.length>0) {
+              let taskstore=document.createElement("h2")
+              taskstore.textContent =task ;
+              let parentEl=document.getElementById("todo") ;
+              parentEl.append(taskstore) ;
+              document.getElementById("userinput").value="";
+               }
+            }) ;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random quote generator</title>
+        <style>
+           * {
+            padding: 0;
+            margin: 0;
+           }
+           body {
+            background-color: rgb(51, 49, 49);
+            color:white;
+            width: 100%;
+           }
+           header {
+            font-family:Arial, Helvetica, sans-serif;
+            margin-top: 5%;
+           }
+           header h1 {
+            text-align: center;
+           }
+           section div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+           }
+            #quote {
+                text-align: center;
+                padding-top:10%;
+                font-size: 2rem;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            #nextbtn {
+                font-size: 1.4rem;
+                padding: 7px 20px;
+                border-radius: 10px;
+                background-color: rgb(71, 66, 66);
+                border: 1px solid white;
+                color: white;
+                font-weight: bold;
+                transition: 0.4s;
+                 cursor: pointer;
+            }
+            #nextbtn:hover {
+                    background-color: rgb(102, 98, 98) ;
+
+            }
+        </style>
+    </head>
+    <body>
+        <Header>
+            <h1>Random quote generator</h1>
+        </Header>
+        <section>
+            <div id="quoteSection">
+                <p id="quote"> A man's goal is to become superman </p>
+                <button id="nextbtn" onclick="gen()">Next</button>
+
+            </div>
+            <script>
+                let quotelist =["The only true wisdom is in knowing you know nothing - Socrates",
+                "The unexamined life is not worth living - plato",
+                "That which does not kill us makes us stronger - Friedrich Nietzsche",
+                "All men are created equal --Thomas Jefferson",
+                "God is dead! He remains dead! And we have killed him - Friedrich Nietzsche ",
+                "There is only one good, knowledge, and one evil, ignorance - Socrates",
+                "Only one man ever understood me, and he didn't understand me - G. W. F. Hegel",
+                "The brave man is he who overcomes not only his enemies but his pleasures - Democritus",
+                "He who thinks great thoughts, often makes great errors - Martin Heidegger"] ;
+                
+                               function gen() {
+                let ran=Math.floor(Math.random()*9)+0 ;
+                 console.log(ran) ;
+                document.getElementById("quote").innerHTML ="&ldquo; "+quotelist[ran]+" &rdquo;<br>";
+                 }
+            </script>
+        </section>
+    </body>
+</html>

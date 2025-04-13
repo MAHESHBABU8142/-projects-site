@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>Math Game</title>
+        <style>
+          *{
+            padding: 0;
+            margin: 0;
+        
+          }
+          html {
+            background-color:rgb(151, 137, 137);
+            font-family: monospace;
+        }
+        body {
+            background: black;
+            color: white;
+            margin:10% 20% ;
+            padding:20px;
+            border-radius: 15px;
+
+            
+        }
+        #logo {
+            font-size:3.5rem;
+            text-align: center;
+        }
+        #highscore {
+            font-size: 1.8rem;
+            margin:20px ;
+            text-align: center;
+            
+        }
+        #btn-div {
+        display: flex;
+        justify-content: center;
+        }
+          #startbtn {
+            background:rgb(78, 77, 77);
+            color: white;
+            font-size: 2rem;
+            border:2px solid white;
+            padding: 5px 25px;
+            margin: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+          }
+          #game-section  {
+            border:2px solid white;
+            border-radius:6px;
+            margin:50px ;
+            padding:30px 0;
+            text-align: center;
+          }
+          h1 {
+            font-size:3.5rem ;
+          }
+          input {
+            background-color: rgb(102, 93, 93);
+            font-size: 2rem;
+            border: none;
+            padding: 7px;
+            border-radius:3px;
+            color: white;
+            font-family: monospace;
+            font-weight: bold;
+            margin: 10px;
+            width:150px;
+            cursor: pointer;
+
+          }
+        </style>
+        </head>
+     <body>
+        <h1 id="logo">Math Game</h1>
+        <p id="highscore" value="o"></p>
+        <div id="btn-div">
+        <button id="startbtn">Start</button>
+      </div>
+        <div id="game-section">
+
+        </div>
+
+
+        <script>
+                let sc=0 ;
+              function gamecode(){
+                let scoreg=document.getElementById("highscore") ;
+                 scoreg.textContent="score:"+sc ;
+                
+                let q=document.createElement("h1") ;
+              let userans=document.createElement("input")
+                userans.setAttribute("type","number") ;
+              let num1=Math.floor(Math.random()*100)+1 ;
+              let num2=Math.floor(Math.random()*100)+1 ;
+              q.innerText=(num1 +" + "+num2 + " = " + " ?" ) ;
+              let game_section =document.getElementById("game-section") ;
+              game_section.appendChild(q) ;
+              game_section.appendChild(userans) ;
+
+              userans.addEventListener("keydown", function(){
+                   if (event.key === "Enter") {
+                      let realans=num1+num2 ;
+                      if (realans==userans.value) {
+                            q.style.color = "rgb(148, 224, 35)" ;
+                            sc++;
+                        }
+                       else {
+                        q.style.color = "rgb(219, 27, 27)" ;
+                        sc-- ;
+                       }
+
+                    gamecode() ;
+                   
+                   }
+              });
+              }
+            let startbtn=document.getElementById("startbtn") ;
+            startbtn.addEventListener("click",gamecode)
+              
+        </script>
+    </body>
+  </html>
